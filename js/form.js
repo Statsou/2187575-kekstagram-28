@@ -27,6 +27,7 @@ const closeModal = function () {
   uploadFile.value = '';
   hashtag.value = ''; // Очистка хештегов
   description.value = ''; // Очистка хештегов комментариев
+  document.querySelector('.pristine-error').textContent = '';
   document.removeEventListener('keydown', onFormKeydown);
 };
 
