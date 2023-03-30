@@ -1,5 +1,5 @@
 import { getRandomNumber, getRandomUniqueNumber } from '../utils.js';
-import { commentMessages, commentNames, photoDescription } from './data.js';
+import { commentMessages as COMMENT_MESSAGES, COMMENT_NAMES, PHOTO_DESCRIPTION } from './data.js';
 
 const generatePhotoGallery = function (count) {
   const generateUrl = getRandomUniqueNumber(1, 25);
@@ -9,7 +9,7 @@ const generatePhotoGallery = function (count) {
     return {
       id,
       url: `photos/${generateUrl()}.jpg`,
-      description: photoDescription[getRandomNumber(0, photoDescription.length - 1)],
+      description: PHOTO_DESCRIPTION[getRandomNumber(0, PHOTO_DESCRIPTION.length - 1)],
       likes: getRandomNumber(15, 200),
       comments: []
     };
@@ -19,8 +19,8 @@ const generatePhotoGallery = function (count) {
     return {
       id: generateIdComments(),
       avatar: `img/avatar-${getRandomNumber(1, 6)}.svg`,
-      message: commentMessages[getRandomNumber(0, commentMessages.length - 1)],
-      name: commentNames[getRandomNumber(0, commentNames.length - 1)]
+      message: COMMENT_MESSAGES[getRandomNumber(0, COMMENT_MESSAGES.length - 1)],
+      name: COMMENT_NAMES[getRandomNumber(0, COMMENT_NAMES.length - 1)]
     };
   };
 

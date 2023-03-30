@@ -105,4 +105,4 @@ buttonClose.addEventListener('click', () => {
   closeModal();
 });
 
-export { openBigPicture };// NEW
+export { openBigPicture };

@@ -21,6 +21,7 @@ const getRandomUniqueNumber = function (min, max) {
 };
 
 const getShowAlert = function () {
+  const countdownTimer = 3000;
   const errorModal = document.querySelector('#error').content.querySelector('.error');
   const showErrorModal = errorModal.cloneNode(true);
   showErrorModal.getElementsByTagName('h2')[0].textContent = 'Ошибка запроса при загрузке данных';
@@ -29,7 +30,7 @@ const getShowAlert = function () {
   const removeModal = function () {
     document.body.removeChild(showErrorModal);
   };
-  setTimeout(removeModal, 3000);
+  setTimeout(removeModal, countdownTimer);
 };
 
 const showAlert = function () {

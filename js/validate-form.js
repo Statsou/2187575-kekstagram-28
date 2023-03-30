@@ -96,6 +96,4 @@ uploadFile.addEventListener('change', () => {
   }
 });
 
-buttonClose.addEventListener('click', () => {
-  closeModal();
-});
+buttonClose.addEventListener('click', closeModal);
